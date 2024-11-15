@@ -1,0 +1,3 @@
+/Users/apple/CLionProjects/WordStatisticsAnalysisfor a Fictional Text File/cmake-build-debug/CMakeFiles/WordStatisticsAnalysisfor_a_Fictional_Text_File.dir
+/Users/apple/CLionProjects/WordStatisticsAnalysisfor a Fictional Text File/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/apple/CLionProjects/WordStatisticsAnalysisfor a Fictional Text File/cmake-build-debug/CMakeFiles/rebuild_cache.dir
