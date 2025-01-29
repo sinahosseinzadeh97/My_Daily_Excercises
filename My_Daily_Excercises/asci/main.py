@@ -18,22 +18,19 @@ def compute_statistics(x, y, N, ascii_art):
     char_count = {}
     total_chars = N * N
 
-    for i in range(y, y + N):
-        for j in range(x, x + N):
-            char = ascii_art[i][j]
-            if char in char_count:
-                char_count[char] += 1
-            else:
-                char_count[char] = 1
+    for i in range(x, x + N):  # x is row
+        for j in range(y, y + N):  # y is column
+            char = ascii_art[i][j]  # Extract character at row i, column j
+            char_count[char] = char_count.get(char, 0) + 1  # Count occurrences
 
-    # Calculate percentages
-    for char in char_count:
-        char_count[char] = (char_count[char] / total_chars) * 100
+    # Convert counts to percentages
+    char_percentages = {char: (count / total_chars) * 100 for char, count in char_count.items()}
 
-    # Sort by percentage in descending order
-    sorted_chars = sorted(char_count.items(), key=lambda item: item[1], reverse=True)
+    # Sort by frequency
+    sorted_chars = sorted(char_percentages.items(), key=lambda item: item[1], reverse=True)
 
     return sorted_chars
+
 
 def main():
     filename = "landscape.txt"
